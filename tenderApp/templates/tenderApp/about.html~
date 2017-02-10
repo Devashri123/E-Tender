@@ -1,0 +1,11 @@
+{% extends 'tenderApp/base_home.html' %}     
+{% block body %}
+ <div class="panel panel-default">
+	<div class="panel-heading"> <h1>About Us</h1>
+	</div>
+		<div class="panel-body">
+			Ours is a platform that serves Vendors and Buyers with new business opportunities.		
+					
+		</div>
+</div>
+{% endblock %}

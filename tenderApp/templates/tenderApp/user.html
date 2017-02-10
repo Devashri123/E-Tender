@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+<div>
+    <h1><a href="/">Registred users are Here!!!</a></h1>
+</div>
+
+{% for user in users %}
+    <div>
+        <p>users: {{ user.user_email}}</p>
+        
+    </div>
+{% endfor %}
+</body>
+</html>

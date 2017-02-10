@@ -1,0 +1,195 @@
+{% load staticfiles %}
+{% load tags %}
+	{% url homepage as Home %}
+	{% url about as About %}
+	{% url contact as Contact %}
+	{% url help as Help %}
+        {% url services as Services %}
+        {% url buyerSignup as Buyer-SignUp  %}
+        {% url vendorSignup as Vendor-SignUp  %}
+        {% url login as Login  %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    
+	<head>
+	
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Login &amp; Register Templates</title>
+		<!--css-->
+                
+		<link href="{% static 'tenderApp/bootstrap/css/bootstrap.min.css' %}" rel='stylesheet' type='text/css' />
+                <link href="{% static 'tenderApp/font-awesome/css/font-awesome.min.css' %}" rel='stylesheet' type='text/css' />
+                <link href="{% static 'tenderApp/css/form-elements.css' %}" rel='stylesheet' type='text/css' />
+                <link href="{% static 'tenderApp/css/style.css' %}" rel='stylesheet' type='text/css' />
+                <link href="{% static 'tenderApp/css/font.css' %}" rel='stylesheet' type='text/css' />
+        
+              <!-- Favicon and touch icons -->
+
+              <link href="{% static 'tenderApp/ico/favicon.png' %}" rel='shortcut icon' />
+         
+        
+             <link rel="apple-touch-icon-precomposed" sizes="144x144" href=" {% static 'tenderApp/ico/apple-touch-icon-144-precomposed.png'%}">
+
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href=" {% static 'tenderApp/ico/apple-touch-icon-114-precomposed.png' %}">
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href=" {% static 'tenderApp/ico/apple-touch-icon-72-precomposed.png' %}">
+            <link rel="apple-touch-icon-precomposed" href="{% static 'tenderApp/ico/apple-touch-icon-57-precomposed.png'%}">
+      
+                <!--scripts-->
+ </head>
+
+<body>
+
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    	<div class="navbar-header">
+		<button type="button"	class="navbar-toggle" data toggle ="collapse" data target="#TopNavBar"
+		<span class="icon-bar"></span>
+		<span class="icon-bar">	</span>
+		<span class="icon-bar">	</span>
+		</button>
+      	<a class="navbar-brand" href="#">Online Tender Mangement System</a>
+    	</div>
+		
+ 	 
+		<ul class="nav navbar-nav">
+			<li class="active"><a class="{% active request homepage %}" href="homepage">Home</a></li>
+			<li class="active"><a class="{% active request services %}" href="services">Services</a></li>
+			<li class="active"><a class="{% active request contact %}" href="contact">Contact</a></li>
+			<li class="active"><a class="{% active request about %}" href="about">About</a></li>
+			<li class="active"><a class="{% active request help %}" href="help">Help</a></li>
+		</ul>
+	
+      
+	  </ul>
+	  <form class="navbar-form form-inline pull-right">
+	  <ul class="nav navbar-nav">
+
+                 <li class="active"><a class="{% active request buyerSignup %}" href="buyerSignup">Buyer-SignUp</a></li>
+                 <li class="active"><a class="{% active request vendorSignup %}" href="vendorSignup">Vendor-SignUp</a></li>
+                 <li class="active"><a class="{% active request login %}" href="login">Login</a></li>
+		 
+		 
+	</ul>
+	</form>
+		
+	  </div>
+	  
+	</nav>
+
+
+        
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                	
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 centered">
+                            <h1> <center> Register Here...!!</center></h1>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                        <div class="row">
+                       
+                        
+                        	
+                        <div class="col-lg-6">
+                       
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Sign up now</h3>
+	                            		<p>Fill the details to create new account</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                         </div>
+	                            <div class="form-bottom">
+				                    <form  id="signin" role="form" action="" method="post" class="registration-form">{% csrf_token %}
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-full-name">Full Name</label>
+				                        	<input type="text" name="name" placeholder="Full name..." class="form-control" id="name" required>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="address">Address</label>
+				                        	<input type="text" name="address" placeholder="Address..." class="form-control" id="address" required>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="contactNo">ContactNO</label>
+				                        	<input type="tel" name="contactNo" placeholder="Contact Number..." class="form-control" id="contactNo" required>
+				                        </div>
+                                                        <div class="form-group">
+				                        	<label class="sr-only" for="regNo">Registration Number</label>
+				                        	<input type="text" name="regNo" placeholder="Registration Number..." class="form-control" id="regNo" required>
+				                        </div>
+                                                        <div class="form-group">
+				                        	<label class="sr-only" for="email">Email as Username</label>
+				                        	<input type="email" name="email" placeholder="username@example.com" class="form-control" id="email" required>
+				                        </div>
+                                                        <div class="form-group">
+				                        	<label class="sr-only" for="password">Password</label>
+				                        	<input type="password" pattern=".{8,10}" title="8-10 characters" name="password" placeholder="password123" class="form-control" id="password" required>
+                                                        </div>
+                                                        <div class="form-group">
+				                        	<label class="sr-only" for="confirm_password">Confirm Password</label>
+				                        	<input type="password" pattern=".{8,10}" title="8-10 characters" name="confirm_password" placeholder="confirm_password" class="form-control" id="confirm_password" required>
+                                                        </div>
+                                                        
+				                        <button type="submit" class="btn" id="signup">Sign Up!</button>
+				                    
+                                                        
+				                    </form>
+			                    </div>
+                                           <div class="col-lg-6"></div>
+                        	</div>
+                                
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        
+<!-- Javascript -->
+        <script src="{% static 'tenderApp/js/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'tenderApp/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'tenderApp/js/jquery.backstretch.min.js' %}"></script>
+        <script src="{% static 'tenderApp/js/scripts.js' %}"></script>
+        <script src="{% static 'tenderApp/js/password.js' %}"></script>
+       <script type="text/javascript">
+
+$(document).on('submit','#signin',function(e)
+{
+e.preventDefault();
+$.ajax({
+type:'POST',
+url:'/tenderApp/create_buyer',
+data:{
+    name:$('#name').val(),
+    address:$('#address').val(),
+    regNo:$('#regNo').val(),
+    contactNo:$('#contactNo').val(),
+    email:$('#email').val(),
+    password:$('#password').val(),
+    csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+},
+success:function(){
+alert("New Buyer account has been created successfully");}
+});
+});
+       </script>
+
+</body>
+</html>

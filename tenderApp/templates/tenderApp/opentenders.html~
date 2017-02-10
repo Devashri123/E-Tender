@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+{% for tender in tenderList %}
+{% if tender.tender_deadline != datetime.date.today %}
+{{tender.tender_name}}
+{{tender.tender_deadline}}
+{{tender.buyer1.buyer_name}}
+{% endif %}
+{% endfor %}
+</body>

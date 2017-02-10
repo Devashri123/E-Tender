@@ -1,0 +1,15 @@
+<html>
+<body>
+<div>
+    <h1><a href="/">Registered Vendors:</a></h1>
+</div>
+
+{% for vendor in vendors %}
+    <div>
+        
+        <h1>{{ vendor.vendor_name }}</h1>
+        
+    </div>
+{% endfor %}
+</body>
+</html>

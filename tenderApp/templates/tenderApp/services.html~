@@ -1,0 +1,11 @@
+{% extends 'tenderApp/base_home.html' %}     
+{% block body %}
+ <div class="panel panel-default">
+	<div class="panel-heading"> <h1>Services</h1>
+	</div>
+		<div class="panel-body">
+			Our services include automated gathering of quotes for a tender and selection of optimal vendor from the intersted vendors.		
+					
+		</div>
+</div>
+{% endblock %}

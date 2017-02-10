@@ -1,0 +1,274 @@
+
+{% load staticfiles %}
+{% load tags %}
+	{% url homepage as Home %}
+	{% url about as About %}
+	{% url contact as Contact %}
+	{% url help as Help %}
+        {% url services as Services %}
+        {% url buyerSignup as Buyer-SignUp  %}
+        {% url vendorSignup as Vendor-SignUp  %}
+        {% url login as Login  %}
+<html>
+    <head>
+	 	 
+		 
+	    <title>Online Tender Management System </title>
+		<meta charset="utf-8">
+		
+		
+    
+	
+		<!--css-->
+		
+		<link href="{% static 'tenderApp/bootstrap/css/bootstrap.min.css' %}" rel='stylesheet' type='text/css' />
+		<link href="{% static 'tenderApp/css/homepage.css' %}" rel='stylesheet' type='text/css' />
+		<link href="{% static 'tenderApp/css/slide.css' %}" rel='stylesheet' type='text/css' />
+		
+                		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	  
+	<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.scrollit {
+    overflow:scroll;
+    height:310px;
+}
+</style>
+	
+
+    </head>
+	
+<body>
+	
+	
+	
+	
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    	<div class="navbar-header">
+		<button type="button"	class="navbar-toggle" data toggle ="collapse" data target="#TopNavBar"
+		<span class="icon-bar"></span>
+		<span class="icon-bar">	</span>
+		<span class="icon-bar">	</span>
+		</button>
+      	<a class="navbar-brand" href="#">Online Tender Mangement System</a>
+    	</div>
+		
+ 	 
+		<ul class="nav navbar-nav">
+			<li class="active"><a class="{% active request homepage %}" href="homepage">Home</a></li>
+			<li class="active"><a class="{% active request services %}" href="services">Services</a></li>
+			<li class="active"><a class="{% active request contact %}" href="contact">Contact</a></li>
+			<li class="active"><a class="{% active request about %}" href="about">About</a></li>
+			<li class="active"><a class="{% active request help %}" href="help">Help</a></li>
+		</ul>
+	
+      
+	  </ul>
+	  <form class="navbar-form form-inline pull-right">
+	  <ul class="nav navbar-nav">
+
+                 <li class="active"><a class="{% active request buyerSignup %}" href="buyerSignup">Buyer-SignUp</a></li>
+                 <li class="active"><a class="{% active request vendorSignup %}" href="vendorSignup">Vendor-SignUp</a></li>
+                 <li class="active"><a class="{% active request login %}" href="login">Login</a></li>
+		 
+		 
+	</ul>
+	</form>
+		
+	  </div>
+	  
+	</nav>
+
+	<marquee bgcolor="#D3D3D3">
+		THIS IS THE NEWS FLASH.................!!!!!!!!!!!!!!!!!!!!
+	</marquee>
+
+	
+	       
+{% block body %}
+{% endblock %}
+
+
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li
+	  <li data-target="#myCarousel" data-slide-to="4"></li>
+	  <li data-target="#myCarousel" data-slide-to="5"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="{% static 'tenderApp/img/homepage/img1.jpg' %}" alt="img1" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="{% static 'tenderApp/img/homepage/img2.jpg' %}" alt="img2" width="460" height="345">
+      </div>
+    
+      <div class="item">
+        <img src=" {% static 'tenderApp/img/homepage/login1.jpg' %}" alt="img3" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="{% static 'tenderApp/img/homepage/login2.jpg' %}" alt="img4" width="460" height="345">
+      </div>
+	  
+	  
+      <div class="item">
+        <img src="{% static 'tenderApp/img/homepage/login4.jpg' %}" alt="img5" width="460" height="345">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+	
+		<div class="row">
+           <div class="col-md-4">
+		   <div class="panel panel-default">
+			    <div class="panel-heading"> <h2>Our Services Over The Years</h2></div>
+					<div class="panel-body">
+					
+					<img src="{% static 'tenderApp/img/homepage/graph.png' %}" class="img-thumbnail" alt="Logo" width="390" height="240" >
+						
+				   </div>
+				</div>
+		   
+			</div>
+	 
+           <div class="col-md-4">
+		   <div class="panel panel-default">
+			    <div class="panel-heading"> <h2>Open Tenders</h2></div>
+					<div class="panel-body">
+					 <div class="scrollit">
+<table>
+  <tr>
+    <th>Sr. No.</th>
+    <th>Tender Name</th>
+    <th>Buyer Name</th>
+    <th>Deadline</th>
+  </tr>
+{% for tender in tenderList %}
+  
+<tr>
+    <td>11.</td>
+    <td>{{tender.tender_name}}</td>
+    <td>{{tender.tender_deadline}}</td>
+    <td>{{tender.buyer1.buyer_name}}</td>
+  </tr>
+{% endfor %}
+</table>
+</div>
+
+
+
+						
+				   </div>
+				</div>
+			</div>	
+			   
+			   
+			<div class="col-md-4">
+           
+				<div class="panel panel-default">
+  						  <div class="panel-heading"><h2>Closed Tenders</h2></div>
+				<div class="panel-body">
+
+<div class="scrollit">
+<table>
+  <tr>
+    <th>Sr. No.</th>
+    <th>Tender Name</th>
+    <th>Buyer Name</th>
+    <th>Deadline</th>
+  </tr>
+  
+{% for tender in tenderList1 %}
+  
+<tr>
+    <td>11.</td>
+    <td>{{tender.tender_name}}</td>
+    <td>{{tender.tender_deadline}}</td>
+    <td>{{tender.buyer1.buyer_name}}</td>
+  </tr>
+{% endfor %}
+  
+</table>
+</div>
+
+
+
+
+				  
+					
+				</div>
+  				</div>
+			</div>
+		  	   
+	</div>	
+	
+	
+	
+	
+
+
+<!-- Javascript -->
+        <script src="{% static 'tenderApp/js/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'tenderApp/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'tenderApp/js/slide.js' %}"></script>
+        <script src="{% static 'tenderApp/js/script.js' %}"></script>
+        
+	
+    </body>
+	
+
+
+</html>

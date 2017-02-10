@@ -1,0 +1,45 @@
+{% extends 'tenderApp/baseNew.html' %}
+{% load staticfiles %}
+
+
+
+{% block body %}
+         
+           
+
+	
+			<!--start-login-form-->
+				<div class="main">
+			    	<div class="login-head">
+					    <h1>Vendor Sign Up !</h1>
+					</div>
+					<div  class="wrap">
+						  <div class="Regisration">
+						  	<div class="Regisration-head">
+						    	<h2><span></span>Sign Up</h2>
+						 	 </div>
+						  	<form>
+						  		<input type="text" value=" Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" >
+						  								  		
+<input type="text" value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}" >
+<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}" >
+						  		<input type="text" value="Contact No." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contact No.';}" >
+								<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" >
+								<input type="password" value=" Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' Confirm Password';}" >
+								 <div class="Remember-me">
+								<div class="p-container">
+								
+								<div class ="clear"></div>
+							</div>
+												 
+								<div class="submit">
+									<input type="submit" onclick="myFunction()" value="Sign Me Up >" >
+								</div>
+									<div class="clear"> </div>
+								</div>
+											
+						  </form>
+					</div>
+
+{% endblock %}
+

@@ -1,0 +1,15 @@
+<html>
+<body>
+<div>
+    <h1><a href="/">Registered Buyers:</a></h1>
+</div>
+
+{% for buyer in buyers %}
+    <div>
+        
+        <h1>{{ buyer.buyer_name }}</h1>
+        
+    </div>
+{% endfor %}
+</body>
+</html>

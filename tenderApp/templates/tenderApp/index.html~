@@ -1,0 +1,97 @@
+{% extends 'tenderApp/baseNew.html' %}
+{% block body %}
+        
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                	
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 centered">
+                            <h1><strong> <center>Register Here...!!</center></strong> </h1>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                        
+                       
+                        <div class="col-sm-1"></div>
+                        	
+                        <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Sign up now</h3>
+	                            		<p>Fill the details to create new account</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form role="form" action="" method="post" class="registration-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-full-name">Full Name</label>
+				                        	<input type="text" name="name" placeholder="Full name..." class="form-full-name form-control" id="name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="address">Address</label>
+				                        	<input type="text" name="address" placeholder="Address..." class="address form-control" id="address">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="contactNo">Email</label>
+				                        	<input type="text" name="contactNo" placeholder="Contact Number..." class="contactNo form-control" id="contactNo">
+				                        </div>
+                                                        <div class="form-group">
+				                        	<label class="sr-only" for="regNo">Registration Number</label>
+				                        	<input type="text" name="regNo" placeholder="Registration Number..." class="regNo form-control" id="regNo">
+				                        </div>
+                                                        <div class="form-group">
+				                        	<label class="sr-only" for="email">Email as Username</label>
+				                        	<input type="text" name="email" placeholder="username@example.com" class="email form-control" id="email">
+				                        </div>
+                                                        <div class="form-group">
+				                        	<label class="sr-only" for="password">Password</label>
+				                        	<input type="text" name="password" placeholder="password123" class="password form-control" id="password">
+				                        </div>
+                                                        <div class="form-group">
+				                        	<label class="sr-only" for="reenterpassword">Re-enter Password</label>
+				                        	<input type="text" name="reenterpassword" placeholder="password123" class="reenterpassword form-control" id="reenterpassword">
+				                        </div>
+				                        
+				                        <button type="submit" class="btn">Sign Up!</button>
+				                    </form>
+			                    </div>
+                        	</div>
+                        	
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+        <footer>
+        	<div class="container">
+        		<div class="row">
+        			
+        			<div class="col-sm-8 col-sm-offset-2">
+        				<div class="footer-border"></div>
+        				<p>Made by Devashri and kajal having a lot of fun. <i class="fa fa-smile-o"></i></p>
+        			</div>
+        			
+        		</div>
+        	</div>
+        </footer>
+
+        
+        
+        
+        
+    {% endblock %}

@@ -1,0 +1,14 @@
+<html>
+<head>
+</head>
+<body>
+<h2>Hi {{ full_name }} you are now logged in ..
+</body>
+</html>
+
+
+
+
+
+
+

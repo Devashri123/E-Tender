@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  
+  
+  
+
+<!--css-->
+		
+		<link href="{% static 'tenderApp/css/login1.css' %}" rel='stylesheet' type='text/css' />
+		<link href="{% static 'tenderApp/css/login2.css' %}" rel='stylesheet' type='text/css' />
+		<link href="{% static 'tenderApp/css/login3.css' %}" rel='stylesheet' type='text/css' />
+                <link href="{% static 'tenderApp/css/login4.css' %}" rel='stylesheet' type='text/css' />
+                <link href="{% static 'tenderApp/css/loginstyle.css' %}" rel='stylesheet' type='text/css' />
+
+  
+
+</head>
+
+<body>
+
+<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Get<span>Started !</span></div>
+		</div>
+		<br>
+		<div class="login">
+				<input type="text" placeholder="Username" name="user" required><br>
+				<input type="password" placeholder="Password" name="password" required><br>
+                               <!-- <label class="radio-inline"> -->
+                                 <input type="radio" name="radio"> <font color="midnightblue" size="3"> <b>Buyer</b></font>
+                                <!-- </label> -->
+                               <!-- <label class="radio-inline"> -->
+                                <input type="radio" name="radio"> <font color="midnightblue" size="3"> <b>Vendor</b></font>
+                                <!-- </label> -->
+				<input type="button" value="LOGIN !">
+		</div>
+  <script src="{% static 'tenderApp/js/login1.js' %}"></script>
+  <script src="{% static 'tenderApp/js/login2.js' %}"></script>
+
+
+  
+</body>
+</html>

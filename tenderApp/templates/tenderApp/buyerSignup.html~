@@ -1,0 +1,149 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>Buyer Sign Up !</title>
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Lobster|Pacifico:400,700,300|Roboto:400,100,100,300,300,400,500,500' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,500,600,700,300' rel='stylesheet' type='text/css'>
+		
+		<meta charset="utf-8">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="css/style.css" rel='stylesheet' type='text/css' />
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!--webfonts-->
+	</head>
+	<body>	
+	
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    	<div class="navbar-header">
+		<button type="button"	class="navbar-toggle" data toggle ="collapse" data target="#TopNavBar"
+		<span class="icon-bar">	</span>
+		<span class="icon-bar">	</span>
+		<span class="icon-bar">	</span>
+		</button>
+      	<a class="navbar-brand" href="#">Online Tender Mangement System</a>
+    	</div>
+		<ul class="nav navbar-nav">
+ 	  <li class="active">
+		  <a href="home.html">Home</a></li>
+		<li><a href="services.html">Services</a></li>
+      <li><a href="aboutUs.html">About</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </div>
+  
+</nav>
+			<!--start-login-form-->
+				<div class="main">
+			    	<div class="login-head">
+					    <h1>Buyer Sign Up !</h1>
+					</div>
+					<div  class="wrap">
+						  <div class="Regisration">
+						  	<div class="Regisration-head">
+						    	<h2><span></span>Sign Up</h2>
+						 	 </div>
+						  	<form>
+						  		<input type="text" value=" Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" >
+						  		
+<input type="text" value="Company Registration No." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'CRN';}" >						  		
+<input type="text" value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}" >
+<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}" >
+						  		<input type="text" value="Contact No." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contact No.';}" >
+								<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" >
+								<input type="password" value=" Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' Confirm Password';}" >
+								 <div class="Remember-me">
+								<div class="p-container">
+								
+								<div class ="clear"></div>
+							</div>
+												 
+								<div class="submit">
+									<input type="submit" onclick="myFunction()" value="Sign Me Up >" >
+								</div>
+									<div class="clear"> </div>
+								</div>
+											
+						  </form>
+					</div>
+						<script>
+
+//For getting CSRF token
+function getCookie(name) {
+          var cookieValue = null;
+          if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+               var cookie = jQuery.trim(cookies[i]);
+          // Does this cookie string begin with the name we want?
+          if (cookie.substring(0, name.length + 1) == (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+             }
+          }
+      }
+ return cookieValue;
+}
+
+
+//For doing AJAX post
+
+//When submit is clicked
+ $("#submit").click(function(e) {
+
+//Prevent default submit. Must for Ajax post.Beginner's pit.
+ e.preventDefault();
+
+//Prepare csrf token
+ var csrftoken = getCookie('csrftoken');
+
+
+//Collect data from fields
+ var email = $('#inputEmail').val();
+ var password = $('#inputPassword').val();
+
+//This is the Ajax post.Observe carefully. It is nothing but details of where_to_post,what_to_post
+//Send data  
+ $.ajax({
+       url : '/tenderApp/create_user', // the endpoint,commonly same url
+       type : "POST", // http method
+       data : { csrfmiddlewaretoken : csrftoken, 
+       email : email,
+       password : password
+ }, // data sent with the post request
+
+ // handle a successful response
+ success : function(json) {
+ console.log(json); // another sanity check
+ //On success show the data posted to server as a message
+ alert('hiii...created successfully!!!');
+ },
+
+ // handle a non-successful response
+ error : function(xhr,errmsg,err) {
+ console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+ }
+ });
+});
+</script>
+
+	</body>
+</html>
+
+

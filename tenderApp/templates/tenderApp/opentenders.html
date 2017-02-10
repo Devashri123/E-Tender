@@ -1,0 +1,11 @@
+<html>
+<head>
+</head>
+<body>
+{% for tender in tenderList %}
+
+{{tender.tender_name}}
+{{tender.tender_deadline}}
+{{tender.buyer1.buyer_name}}
+{% endfor %}
+</body>
